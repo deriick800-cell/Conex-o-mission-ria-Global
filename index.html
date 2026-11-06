@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="Conexão Missionária Global — HQs, estudos e histórias bíblicas para conhecer e compartilhar a Palavra de Deus.">
+<title>Conexão Missionária Global | Biblioteca de HQs</title>
+<style>
+:root{--bg:#050914;--panel:#0a1224;--gold:#f7c84b;--gold2:#ffe9a0;--blue:#09285b;--white:#f7f4e9;--muted:#aeb7c9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#10295a 0,#050914 48%,#02040a 100%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.topbar{position:sticky;top:0;z-index:20;background:rgba(2,5,13,.96);border-bottom:2px solid var(--gold);box-shadow:0 4px 24px #000}
+.nav{max-width:1440px;margin:auto;min-height:78px;padding:10px 3%;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;min-width:245px}.brand-mark{width:54px;height:54px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:30px;background:radial-gradient(circle,#174b9c,#020713);box-shadow:0 0 18px #eab83c66}
+.brand-name{font-family:Georgia,serif;font-weight:bold;line-height:1.02;color:var(--gold);font-size:19px;text-shadow:0 2px 5px #000}
+.navlinks{display:flex;align-items:center;justify-content:center;gap:26px;flex:1}.navlinks a{font-weight:700;font-size:14px;color:#f8f1d9}.navlinks a:hover{color:var(--gold)}
+.search{display:flex;align-items:center;background:#fff;border-radius:30px;padding:5px 8px 5px 15px;min-width:190px}.search input{border:0;outline:0;width:100%;font-size:14px;color:#111}.search button{border:0;background:none;font-size:20px;cursor:pointer}
+.nav-actions{display:flex;gap:14px;color:var(--gold);font-size:23px}.menu-toggle{display:none;border:1px solid var(--gold);background:none;color:var(--gold);border-radius:8px;padding:7px 10px;font-size:20px}
+.hero{max-width:1440px;margin:0 auto;height:clamp(220px,29vw,390px);background-image:linear-gradient(90deg,#02081722,#02081705),url('assets/banner-principal.jpg');background-size:cover;background-position:center;border-bottom:3px solid var(--gold);position:relative}
+.hero:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 40px #0008;pointer-events:none}
+.hero-caption{position:absolute;left:5%;bottom:7%;z-index:1;max-width:430px;background:#020817b8;border:1px solid #f7c84b88;border-radius:12px;padding:14px 18px;backdrop-filter:blur(5px)}
+.hero-caption strong{color:var(--gold);font:700 clamp(18px,2.3vw,28px) Georgia,serif}.hero-caption p{margin:7px 0 0;color:#fff;font-size:14px}
+main{max-width:1440px;margin:auto;padding:28px 3% 40px}.section{margin:0 0 38px}.section-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:20px}
+.section-title{font:700 clamp(23px,3vw,34px) Georgia,serif;margin:0;white-space:nowrap}.section-title span{color:var(--gold)}
+.rule{height:2px;background:linear-gradient(90deg,var(--gold),transparent);flex:1;min-width:30px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #a77a19;background:#101b31;color:#eee4c4;border-radius:22px;padding:8px 15px;font-weight:700;cursor:pointer}.filter.active,.filter:hover{background:linear-gradient(#ffe68c,#d99b19);color:#17100a;border-color:#fff0a8}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px 18px}
+.book{min-width:0;cursor:pointer;transition:transform .2s ease;position:relative}.book:hover{transform:translateY(-5px)}.book:focus-visible{outline:3px solid #ffe68c;outline-offset:4px}.book:after{content:"CLIQUE PARA LER";display:block;color:#f4ce69;font-size:10px;font-weight:bold;letter-spacing:.7px;margin-top:5px}
+.cover-wrap{position:relative;border:2px solid var(--gold);border-radius:9px;overflow:hidden;background:#111;box-shadow:0 0 12px #eebc4055;aspect-ratio:3/4.05}
+.cover-wrap img{width:100%;height:100%;object-fit:cover;display:block}.ribbon{position:absolute;right:9px;top:0;width:17px;height:31px;background:#c51d27;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.book h3{font-size:15px;line-height:1.25;margin:9px 0 4px;color:#fff}.meta{font-size:12px;color:#d6d8df;line-height:1.6}.meta small{display:block;color:#929bad;font-size:10px}
+.empty{display:none;color:var(--muted);padding:24px 0}.footer{border-top:2px solid var(--gold);background:linear-gradient(90deg,#020611,#0c1b3b,#020611);text-align:center;padding:28px 15px;color:var(--gold2);font:italic 22px Georgia,serif}.footer small{display:block;font:12px Arial;color:var(--muted);margin-top:10px}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:50;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-card{max-width:680px;width:100%;background:#0b1428;border:1px solid var(--gold);border-radius:16px;padding:20px;display:grid;grid-template-columns:minmax(130px,220px) 1fr;gap:22px;box-shadow:0 0 35px #e6b63b55;position:relative}.modal-card img{width:100%;border:2px solid var(--gold);border-radius:8px}.modal-card h2{font:700 26px Georgia,serif;color:var(--gold);margin:8px 0}.modal-card p{line-height:1.6;color:#e0e4ed}.close{position:absolute;right:12px;top:8px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}.primary{display:inline-block;background:linear-gradient(#ffe68c,#d99b19);color:#17100a;padding:10px 18px;border-radius:22px;font-weight:bold;margin-top:8px;border:0;cursor:pointer}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.nav{gap:12px}.brand{min-width:190px}.navlinks{gap:14px}}
+@media(max-width:700px){.nav{flex-wrap:wrap;justify-content:space-between}.brand{min-width:0}.brand-name{font-size:15px}.brand-mark{width:43px;height:43px;font-size:24px}.menu-toggle{display:block}.navlinks{display:none;order:4;flex-basis:100%;flex-direction:column;align-items:flex-start;padding:12px 5px}.navlinks.open{display:flex}.search{order:3;flex:1;min-width:0}.nav-actions{display:none}.hero{height:235px;background-position:48% center}.hero-caption{left:4%;right:4%;bottom:5%;max-width:none;padding:10px 12px}.hero-caption p{font-size:12px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px}main{padding:22px 4%}.section-head{gap:10px}.section-title{white-space:normal}.filters{width:100%}.filter{padding:7px 11px;font-size:12px}.book h3{font-size:13px}.meta{font-size:11px}}
+@media(max-width:390px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.search{flex-basis:100%;order:5}.modal-card{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal-card img{max-width:160px;margin:auto}}
+
+/* Leitor de HQ */
+.reader-overlay{display:none;position:fixed;inset:0;z-index:80;background:#02040af2;overflow:auto;padding:18px}
+.reader-overlay.show{display:block}
+.reader-shell{max-width:980px;margin:0 auto;background:#081329;border:1px solid var(--gold);border-radius:16px;overflow:hidden;box-shadow:0 0 35px #e7b83e55}
+.reader-top{display:flex;align-items:center;gap:12px;padding:13px 18px;background:#030916;border-bottom:1px solid #a77a19;position:sticky;top:0;z-index:2}
+.reader-top h2{font:700 18px Georgia,serif;color:var(--gold);margin:0;flex:1}
+.reader-close{background:transparent;border:1px solid #a77a19;color:white;border-radius:8px;padding:8px 12px;cursor:pointer}
+.reader-page{padding:clamp(18px,4vw,38px);min-height:520px;background:linear-gradient(145deg,#101d36,#071020 70%);display:flex;flex-direction:column;gap:18px}
+.reader-kicker{color:var(--gold);font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+.reader-page h3{font:700 clamp(26px,4vw,42px) Georgia,serif;color:#fff3ca;margin:0}
+.reader-intro{font-size:16px;line-height:1.75;color:#e0e7f3;max-width:780px}
+.comic-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.comic-panel{border:2px solid #d6ad49;border-radius:9px;background:linear-gradient(145deg,#14284b,#080e1d);padding:17px;min-height:145px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 22px #0008}
+.comic-panel strong{font:700 18px Georgia,serif;color:#ffdf8a;margin-bottom:9px}
+.comic-panel p{margin:0;color:#f0f2f7;line-height:1.65;font-size:15px}
+.speech{align-self:flex-start;background:#f8f3e7;color:#171717;border-radius:18px;padding:11px 15px;max-width:90%;font-size:14px;line-height:1.5;position:relative}
+.speech:after{content:"";position:absolute;left:20px;bottom:-8px;border-width:9px 9px 0 0;border-style:solid;border-color:#f8f3e7 transparent transparent transparent}
+.verse-scroll{border:1px solid #d6ad49;border-radius:8px;background:linear-gradient(90deg,#f4dfaa,#fff2cb,#f4dfaa);color:#34230b;padding:15px 18px;font-family:Georgia,serif;line-height:1.6}
+.verse-scroll b{display:block;color:#70490a;margin-bottom:5px}
+.reader-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;background:#030916;border-top:1px solid #a77a19}
+.reader-controls button{border:1px solid #d5a936;border-radius:24px;padding:10px 18px;background:linear-gradient(#ffe68c,#d99b19);color:#17100a;font-weight:bold;cursor:pointer}
+.reader-controls button:disabled{opacity:.35;cursor:not-allowed}
+.reader-count{color:#f7df9b;font-weight:bold;font-size:13px}
+.reader-progress{height:5px;background:#202b40}.reader-progress span{height:100%;display:block;background:linear-gradient(90deg,#d99b19,#fff0a4);width:0;transition:width .2s}
+.reader-note{color:#aeb7c9;font-size:12px;line-height:1.5;padding:0 18px 16px;background:#030916}
+@media(max-width:600px){.reader-overlay{padding:0}.reader-shell{border-radius:0;min-height:100vh}.reader-page{min-height:calc(100vh - 150px);padding:18px}.comic-panels{grid-template-columns:1fr}.comic-panel{min-height:120px}.reader-top h2{font-size:15px}.reader-controls{padding:12px}.reader-controls button{padding:9px 13px;font-size:12px}.reader-count{font-size:11px}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="#inicio" aria-label="Conexão Missionária Global">
+      <span class="brand-mark">✝</span><span class="brand-name">CONEXÃO<br>MISSIONÁRIA<br>GLOBAL</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#inicio">⌂ Início</a><a href="#livros">▤ Livros</a><a href="#sobre">✝ Sobre</a><a href="mailto:contato@conexaomissionaria.org">✉ Contato</a><a href="#galeria">▧ Galeria</a>
+    </div>
+    <label class="search"><input id="searchInput" type="search" placeholder="Buscar HQs..." aria-label="Buscar HQs"><button aria-label="Buscar">⌕</button></label>
+    <div class="nav-actions" aria-label="Atalhos"><span title="Favoritos">🔖</span><span title="Biblioteca">▣</span><span title="Perfil">●</span></div>
+  </nav>
+</header>
+
+<section class="hero" id="inicio" aria-label="Conexão Missionária Global">
+  <div class="hero-caption"><strong>Levando o Evangelho até os confins da terra.</strong><p>“E este evangelho do Reino será pregado em todo o mundo.” — Mateus 24:14</p></div>
+</section>
+
+<main id="livros">
+  <section class="section">
+    <div class="section-head">
+      <h1 class="section-title">▤ Últimas <span>Atualizações</span></h1><div class="rule"></div>
+      <div class="filters" data-filter-group="latest">
+        <button class="filter active" data-category="Todos">Todos</button><button class="filter" data-category="Bíblicas">Bíblicas</button><button class="filter" data-category="Estudos">Estudos</button><button class="filter" data-category="Infantis">Infantis</button><button class="filter" data-category="Missionárias">Missionárias</button>
+      </div>
+    </div>
+    <div class="grid" id="bookGrid"></div>
+    <p class="empty" id="emptyMessage">Nenhuma HQ encontrada. Tente outro título ou categoria.</p>
+  </section>
+  <section class="section" id="galeria">
+    <div class="section-head"><h2 class="section-title">✦ Mais <span>Populares</span></h2><div class="rule"></div></div>
+    <div class="grid" id="popularGrid"></div>
+  </section>
+  <section class="section" id="sobre">
+    <div class="section-head"><h2 class="section-title">Nossa <span>Missão</span></h2><div class="rule"></div></div>
+    <p style="max-width:850px;line-height:1.8;color:#d9dfeb">A Conexão Missionária Global utiliza histórias em quadrinhos, estudos e recursos educativos para apresentar os ensinamentos da Bíblia de maneira acessível. Nosso propósito é conhecer a Palavra, fortalecer a fé e compartilhar o Evangelho.</p>
+  </section>
+</main>
+<footer class="footer">Conheça, Aprenda e Compartilhe a Palavra de Deus!
+  <small>Conexão Missionária Global • “Porque para Deus nada é impossível.” — Lucas 1:37</small>
+</footer>
+
+<div class="reader-overlay" id="readerOverlay" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+  <div class="reader-shell">
+    <div class="reader-top">
+      <button class="reader-close" id="readerClose" aria-label="Fechar leitor">← Voltar</button>
+      <h2 id="readerTitle">Leitor de HQ</h2>
+      <span class="reader-kicker">CMG</span>
+    </div>
+    <div class="reader-progress"><span id="readerProgress"></span></div>
+    <article class="reader-page" id="readerPage"></article>
+    <div class="reader-controls">
+      <button id="prevPage">← Anterior</button>
+      <span class="reader-count" id="readerCount">Página 1 de 1</span>
+      <button id="nextPage">Próxima →</button>
+    </div>
+    <div class="reader-note">Use os botões para avançar ou voltar. Os textos e referências bíblicas aparecem página por página. Para publicar a HQ ilustrada completa, substitua estes quadros pelas páginas finais em imagem.</div>
+  </div>
+</div>
+<script>
+const books = [
+ {id:1,title:"A História da Criação",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"assets/criacao.jpg",desc:"A narrativa bíblica da criação: Deus forma os céus e a terra, prepara a vida e cria a humanidade à sua imagem. Base principal: Gênesis 1–2."},
+ {id:2,title:"Adão e Eva — A Primeira Família",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"assets/adao-e-eva.jpg",desc:"Conheça o jardim do Éden, a primeira família, a tentação, a desobediência e as consequências do pecado. Base principal: Gênesis 2–3."},
+ {id:3,title:"Jesus, a Nossa Esperança",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"assets/jesus-esperanca.jpg",desc:"Uma apresentação da vida, do amor, dos ensinamentos e da esperança oferecida por Jesus Cristo. Leituras: Evangelhos."},
+ {id:4,title:"A Vitória de Cristo",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"assets/vitoria-cristo.jpg",desc:"A morte e a ressurreição de Jesus Cristo e o significado da vitória sobre o pecado e a morte. Leituras: Isaías 53; Mateus 27–28; 1 Coríntios 15."},
+ {id:5,title:"Reavivamento sem Retorno ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"assets/reavivamento.jpg",desc:"Um chamado a lembrar, arrepender-se e voltar ao primeiro amor. Estudo baseado em Apocalipse 2:1–7."},
+ {id:6,title:"Arca Kids — Aprendendo com a Bíblia",category:"Infantis",volume:"VOL. 01",date:"06/11/2026",image:"assets/arca-kids.jpg",desc:"Histórias e ensinamentos bíblicos apresentados de forma simples e apropriada para crianças."},
+ {id:7,title:"O Primeiro Amor — Volte ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"assets/primeiro-amor.jpg",desc:"Uma reflexão sobre a comunhão com Deus, a perseverança e o retorno ao primeiro amor. Base: Apocalipse 2:4–7."},
+ {id:8,title:"Eis-me Aqui, Envia-me a Mim",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"assets/eis-me-aqui.jpg",desc:"Uma mensagem sobre disponibilidade, coragem e obediência ao chamado de Deus. Base: Isaías 6:8."},
+ {id:9,title:"Conexão Missionária Global",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"assets/conexao-global.jpg",desc:"Uma HQ sobre a missão de anunciar o Evangelho e servir pessoas em diferentes lugares. Leituras: Mateus 24:14; Marcos 16:15."},
+ {id:10,title:"Um Novo Começo com Deus",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"assets/novo-comeco.jpg",desc:"Uma história sobre arrependimento, fé, perdão e a possibilidade de recomeçar com Deus. Leituras: 2 Coríntios 5:17; Lamentações 3:22–23."}
+];
+let activeCategory="Todos", activeBook=null, favorites=JSON.parse(localStorage.getItem("cmg-favorites")||"[]");
+const grid=document.getElementById("bookGrid"), popular=document.getElementById("popularGrid"), search=document.getElementById("searchInput");
+function card(book){return `<article class="book" tabindex="0" role="button" aria-label="Abrir ${book.title}" data-id="${book.id}"><div class="cover-wrap"><img loading="lazy" src="${book.image}" alt="Capa de ${book.title}"><span class="ribbon"></span></div><h3>${book.title}</h3><div class="meta">${book.volume}<small>ATUALIZADO: ${book.date}</small></div></article>`}
+function render(){
+ const q=search.value.trim().toLocaleLowerCase("pt-BR");
+ const filtered=books.filter(b=>(activeCategory==="Todos"||b.category===activeCategory)&&(`${b.title} ${b.category} ${b.desc}`).toLocaleLowerCase("pt-BR").includes(q));
+ grid.innerHTML=filtered.map(card).join("");
+ popular.innerHTML=books.slice().sort((a,b)=>[2,5,8,1,3,4,6,7,9,10].indexOf(a.id)-[2,5,8,1,3,4,6,7,9,10].indexOf(b.id)).slice(0,6).map(card).join("");
+ document.getElementById("emptyMessage").style.display=filtered.length?"none":"block";
+}
+
+const readerOverlay=document.getElementById("readerOverlay");
+let currentPages=[], currentPage=0, currentReaderBook=null;
+const pageData = {
+  1:[
+    ["No princípio","A Bíblia começa dizendo que Deus criou os céus e a terra. Antes de todas as coisas que conhecemos, Deus já existia. A criação não aconteceu por acaso: Deus quis criar e preparou cada detalhe.","A luz aparece","Deus disse: “Haja luz”. E houve luz. Ele separou a luz das trevas e chamou a luz de dia e as trevas de noite."],
+    ["O céu, a terra e os mares","Deus organizou as águas, formou o céu e fez aparecer a porção seca. A terra recebeu plantas, árvores e frutos, cada um segundo a sua espécie.","Sol, lua e estrelas","Deus colocou os luminares no céu para marcar dias, tempos e estações. O sol governa o dia, e a lua e as estrelas iluminam a noite."],
+    ["A vida se espalha","Deus criou os seres que vivem nas águas e as aves que voam. Depois criou os animais terrestres: grandes, pequenos e de muitas espécies.","A humanidade","Deus criou o ser humano à sua imagem e semelhança, homem e mulher. Deu à humanidade responsabilidade para cuidar da criação."],
+    ["Deus viu que era bom","Ao terminar sua obra, Deus viu tudo o que havia feito, e era muito bom. A criação revela sua sabedoria, poder e bondade.","O sétimo dia","Deus descansou no sétimo dia, não por cansaço, mas porque concluiu sua obra. Ele abençoou e santificou esse dia."],
+    ["O que aprendemos?","Deus é o Criador de todas as coisas. A vida tem valor, e a criação deve ser cuidada com responsabilidade e gratidão.","Leia na Bíblia","Gênesis 1:1–31; Gênesis 2:1–3. Leia o texto bíblico completo para acompanhar cada etapa da criação."]
+  ],
+  2:[
+    ["Um jardim preparado por Deus","Deus formou o homem do pó da terra e soprou em suas narinas o fôlego de vida. Depois colocou o homem no jardim do Éden para o cultivar e guardar.","Uma companheira","Deus viu que não era bom que o homem estivesse só. Formou a mulher e a apresentou ao homem. Assim começou a primeira família."],
+    ["Uma ordem clara","Deus permitiu que Adão e Eva comessem das árvores do jardim, mas deu uma orientação específica sobre a árvore do conhecimento do bem e do mal.","A serpente conversa com Eva","A serpente questionou a palavra de Deus e tentou fazer Eva duvidar. Eva respondeu, mas acabou dando atenção à tentação."],
+    ["A desobediência","Eva comeu do fruto e deu também a Adão. Eles desobedeceram à ordem de Deus e perceberam que estavam nus. Tentaram se esconder.","Deus chama o homem","Deus perguntou: “Onde estás?” Adão e Eva precisaram reconhecer o que haviam feito. O pecado trouxe vergonha, medo e separação."],
+    ["As consequências","Deus anunciou as consequências da desobediência. A serpente foi condenada a rastejar sobre o ventre e comer pó. A mulher e o homem também ouviram as consequências de sua escolha.","Uma promessa de esperança","Mesmo diante do pecado, Deus anunciou que o descendente da mulher feriria a cabeça da serpente. A promessa aponta para a vitória final sobre o mal."],
+    ["Fora do jardim","Adão e Eva foram retirados do Éden. Deus fez vestimentas para eles e colocou querubins para guardar o caminho da árvore da vida.","Leia na Bíblia","Gênesis 2:7–25; Gênesis 3:1–24. Compare cada quadro com o texto bíblico."]
+  ],
+  3:[
+    ["A promessa de esperança","O nascimento de Jesus foi anunciado como boa notícia. Ele veio ao mundo para revelar o amor de Deus e chamar as pessoas ao arrependimento.","Jesus cresce","Jesus cresceu em sabedoria, estatura e graça diante de Deus e dos homens. Sua vida foi marcada por obediência ao Pai."],
+    ["O Reino de Deus","Jesus ensinou sobre o Reino de Deus por parábolas, conversas e atitudes. Ele chamou as pessoas a amar a Deus e ao próximo.","Amor em ação","Jesus acolheu pessoas, curou enfermos e ensinou a verdade. Suas obras mostravam compaixão e autoridade."],
+    ["O caminho da cruz","Jesus foi rejeitado e condenado, embora não tivesse cometido pecado. Ele entregou sua vida na cruz por amor e para cumprir a missão que recebeu do Pai.","A ressurreição","No terceiro dia, Jesus ressuscitou. A morte não teve a palavra final: os discípulos encontraram o túmulo vazio."],
+    ["Nossa esperança","A mensagem cristã anuncia perdão, reconciliação com Deus e vida eterna por meio de Jesus Cristo.","Leia na Bíblia","Lucas 2; João 3:16; Mateus 5–7; João 19–20. Leia os Evangelhos para conhecer a história completa."]
+  ],
+  4:[
+    ["O Servo prometido","As Escrituras anunciaram que o Servo do Senhor sofreria pelos pecados do povo. Jesus cumpriu a missão de salvar.","A cruz","Jesus foi crucificado. Sua morte não foi um acidente: Ele se entregou voluntariamente, conforme o propósito de Deus."],
+    ["O significado","A cruz revela a gravidade do pecado e a grandeza do amor de Deus. Jesus tomou sobre si o castigo para oferecer perdão.","O túmulo","O corpo de Jesus foi colocado em um túmulo. Os discípulos ficaram tristes e com medo, mas Deus ainda estava agindo."],
+    ["Ele ressuscitou","No primeiro dia da semana, mulheres foram ao túmulo e receberam a notícia: Jesus não estava ali, porque havia ressuscitado.","A vitória","A ressurreição confirma a vitória de Cristo sobre a morte e fundamenta a esperança cristã."],
+    ["Uma esperança viva","A vitória de Cristo chama cada pessoa a crer, arrepender-se e viver uma nova vida com Deus.","Leia na Bíblia","Isaías 53; Mateus 27–28; Lucas 24; 1 Coríntios 15:1–8."]
+  ],
+  5:[
+    ["Lembrar do primeiro amor","Em Apocalipse, Jesus enviou uma mensagem à igreja de Éfeso. Ele reconheceu seu trabalho, perseverança e cuidado com a verdade.","O alerta de Jesus","Apesar das boas obras, aquela igreja havia abandonado o primeiro amor. Era necessário examinar o coração."],
+    ["Lembra, arrepende-te e volta","Jesus chamou a igreja a lembrar de onde havia caído, arrepender-se e praticar as primeiras obras.","O altar e a comunhão","A vida com Deus não deve ser apenas aparência ou rotina. O relacionamento com o Senhor precisa ser cultivado com sinceridade."],
+    ["Ouvir e obedecer","A mensagem às igrejas mostra que Jesus conhece suas obras e chama seu povo à fidelidade.","Leia na Bíblia","Apocalipse 2:1–7. Leia também João 15:1–10 e Salmo 51 para refletir sobre comunhão e arrependimento."]
+  ],
+  6:[
+    ["Aprender com a Palavra","A Bíblia é a Palavra de Deus. Ela ensina quem Deus é, mostra seu amor e orienta nossas escolhas.","Deus nos criou","Cada pessoa é importante. Deus nos criou e nos chama a viver com amor, respeito e obediência."],
+    ["Jesus ama as crianças","Jesus recebeu as crianças e ensinou que elas também são importantes no Reino de Deus.","Praticar o bem","Podemos demonstrar amor ajudando, dividindo, falando a verdade e respeitando nossa família e nossos amigos."],
+    ["Vamos aprender mais?","Ore, leia uma passagem bíblica com um adulto de confiança e converse sobre o que aprendeu.","Leia na Bíblia","Gênesis 1:26–31; Marcos 10:13–16; Salmo 119:105."]
+  ],
+  7:[
+    ["O que é o primeiro amor?","É a dedicação sincera a Deus, que se expressa em fé, obediência, amor e comunhão.","Quando a rotina esfria","É possível continuar fazendo atividades religiosas e, ainda assim, deixar o amor e a devoção perderem força."],
+    ["O chamado de Jesus","Jesus não chamou a igreja apenas para trabalhar mais. Ele chamou a lembrar, arrepender-se e voltar às primeiras obras.","Voltar ao Senhor","A restauração começa quando reconhecemos nossa necessidade de Deus e buscamos sua presença com sinceridade."],
+    ["Uma vida perseverante","O primeiro amor deve aparecer no modo como tratamos Deus e as pessoas todos os dias.","Leia na Bíblia","Apocalipse 2:1–7; Mateus 22:37–39; João 15:9–12."]
+  ],
+  8:[
+    ["Uma visão que transforma","Isaías teve uma visão da santidade e da glória de Deus. Diante do Senhor, reconheceu sua própria necessidade de purificação.","Deus purifica e chama","Isaías foi purificado e ouviu a pergunta: “A quem enviarei, e quem há de ir por nós?”"],
+    ["Eis-me aqui","Isaías respondeu: “Eis-me aqui, envia-me a mim”. Ele se colocou à disposição para cumprir a missão.","Disponibilidade e coragem","Servir a Deus exige humildade, obediência e confiança. Nem sempre o caminho será fácil, mas a mensagem deve ser anunciada com fidelidade."],
+    ["A missão continua","A igreja é chamada a anunciar a Palavra e servir ao próximo, dependendo da direção de Deus.","Leia na Bíblia","Isaías 6:1–8; Mateus 28:18–20; Romanos 10:13–15."]
+  ],
+  9:[
+    ["Uma missão para todos","Jesus ordenou aos discípulos que anunciassem o Evangelho. A mensagem não deveria ficar limitada a um só povo ou lugar.","Até os confins da terra","A missão cristã envolve atravessar fronteiras, aprender a servir e compartilhar a esperança de Cristo com amor e respeito."],
+    ["Cada pessoa pode servir","Há diferentes formas de participar: orar, ensinar, contribuir, acolher e ir. Toda participação deve apontar para Jesus.","A mensagem central","O centro da missão é anunciar Jesus Cristo, sua morte e ressurreição, chamando as pessoas à fé e ao arrependimento."],
+    ["A missão continua","A igreja anuncia o Evangelho enquanto aguarda o cumprimento das promessas de Deus.","Leia na Bíblia","Mateus 24:14; Mateus 28:18–20; Marcos 16:15; Atos 1:8."]
+  ],
+  10:[
+    ["Deus oferece recomeço","Quando reconhecemos nossos erros, podemos nos voltar para Deus. Ele chama ao arrependimento e oferece perdão.","Uma nova vida","A Bíblia ensina que quem está em Cristo é nova criatura. O passado não precisa definir o futuro de quem se volta para Jesus."],
+    ["Passos de fé","Ore com sinceridade, leia a Palavra, procure uma comunidade cristã bíblica e pratique o que aprende.","Caminhar com Deus","Recomeçar não significa nunca enfrentar dificuldades. Significa aprender a confiar em Deus e perseverar em sua Palavra."],
+    ["Esperança para hoje","As misericórdias do Senhor se renovam. Em Deus há esperança para seguir adiante.","Leia na Bíblia","2 Coríntios 5:17; Lamentações 3:22–23; 1 João 1:9; Salmo 51."]
+  ]
+};
+function buildPages(book){
+ const raw=pageData[book.id]||[];
+ return raw.map((p,i)=>({title:p[0],panels:[p[1],p[3]].filter(Boolean),intro:i===0?book.desc:"Acompanhe esta parte da história e confira a passagem bíblica indicada.",verse:i===raw.length-1?p[1]:"",reference:i===raw.length-1?(p[1].match(/(?:Gênesis|João|Mateus|Marcos|Isaías|Apocalipse|Lucas|Romanos|Atos|Salmo|Salmos|1 Coríntios|2 Coríntios|1 João|Lamentações)[^.]*/g)||[]).join("; "):""}));
+}
+function openBook(id){
+ currentReaderBook=books.find(b=>b.id===id);if(!currentReaderBook)return;
+ currentPages=buildPages(currentReaderBook);currentPage=0;
+ document.getElementById("readerTitle").textContent=currentReaderBook.title;
+ renderReaderPage();readerOverlay.classList.add("show");document.body.style.overflow="hidden";
+}
+function renderReaderPage(){
+ const page=currentPages[currentPage];if(!page)return;
+ const panels=page.panels.map((text,i)=>`<div class="comic-panel"><strong>Quadro ${i+1}</strong><p>${text}</p></div>`).join("");
+ const verse=page.reference?`<div class="verse-scroll"><b>📜 Consulte na Bíblia: ${page.reference}</b>${page.verse}</div>`:"";
+ document.getElementById("readerPage").innerHTML=`<span class="reader-kicker">${currentReaderBook.category} • ${currentReaderBook.volume}</span><h3>${page.title}</h3><p class="reader-intro">${page.intro}</p><div class="comic-panels">${panels}</div>${verse}`;
+ document.getElementById("readerCount").textContent=`Página ${currentPage+1} de ${currentPages.length}`;
+ document.getElementById("prevPage").disabled=currentPage===0;
+ document.getElementById("nextPage").disabled=currentPage===currentPages.length-1;
+ document.getElementById("readerProgress").style.width=`${((currentPage+1)/currentPages.length)*100}%`;
+}
+function closeReader(){readerOverlay.classList.remove("show");document.body.style.overflow="";}
+document.getElementById("readerClose").onclick=closeReader;
+document.getElementById("prevPage").onclick=()=>{if(currentPage>0){currentPage--;renderReaderPage()}};
+document.getElementById("nextPage").onclick=()=>{if(currentPage<currentPages.length-1){currentPage++;renderReaderPage()}};
+readerOverlay.addEventListener("click",e=>{if(e.target===readerOverlay)closeReader()});
+document.addEventListener("keydown",e=>{if(!readerOverlay.classList.contains("show"))return;if(e.key==="Escape")closeReader();if(e.key==="ArrowRight"&&currentPage<currentPages.length-1){currentPage++;renderReaderPage()}if(e.key==="ArrowLeft"&&currentPage>0){currentPage--;renderReaderPage()}});
+document.addEventListener("click",e=>{
+ const book=e.target.closest(".book");if(book)openBook(Number(book.dataset.id));
+ const filter=e.target.closest(".filter");if(filter){activeCategory=filter.dataset.category;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===filter));render()}
+});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("book")){e.preventDefault();openBook(Number(e.target.dataset.id))}});
+search.addEventListener("input",render);
+document.getElementById("menuToggle").onclick=()=>document.getElementById("navlinks").classList.toggle("open");
+render();
+</script>
+</body>
+</html>
