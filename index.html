@@ -16,7 +16,7 @@ a{color:inherit;text-decoration:none}.topbar{position:sticky;top:0;z-index:20;ba
 .navlinks{display:flex;align-items:center;justify-content:center;gap:26px;flex:1}.navlinks a{font-weight:700;font-size:14px;color:#f8f1d9}.navlinks a:hover{color:var(--gold)}
 .search{display:flex;align-items:center;background:#fff;border-radius:30px;padding:5px 8px 5px 15px;min-width:190px}.search input{border:0;outline:0;width:100%;font-size:14px;color:#111}.search button{border:0;background:none;font-size:20px;cursor:pointer}
 .nav-actions{display:flex;gap:14px;color:var(--gold);font-size:23px}.menu-toggle{display:none;border:1px solid var(--gold);background:none;color:var(--gold);border-radius:8px;padding:7px 10px;font-size:20px}
-.hero{max-width:1440px;margin:0 auto;height:clamp(220px,29vw,390px);background-image:"banner-principal.jpg"(90deg,#02081722,#02081705),url('banner-principal.jpg');background-size:cover;background-position:center;border-bottom:3px solid var(--gold);position:relative}
+.hero{max-width:1440px;margin:0 auto;height:clamp(220px,29vw,390px);background-image:linear-gradient(90deg,#02081722,#02081705),url('banner-principal.jpg');background-size:cover;background-position:center;border-bottom:3px solid var(--gold);position:relative}
 .hero:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 40px #0008;pointer-events:none}
 .hero-caption{position:absolute;left:5%;bottom:7%;z-index:1;max-width:430px;background:#020817b8;border:1px solid #f7c84b88;border-radius:12px;padding:14px 18px;backdrop-filter:blur(5px)}
 .hero-caption strong{color:var(--gold);font:700 clamp(18px,2.3vw,28px) Georgia,serif}.hero-caption p{margin:7px 0 0;color:#fff;font-size:14px}
@@ -126,16 +126,16 @@ main{max-width:1440px;margin:auto;padding:28px 3% 40px}.section{margin:0 0 38px}
 </div>
 <script>
 const books = [
- {id:1,title:"A História da Criação",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"/criacao.jpg",desc:"A narrativa bíblica da criação: Deus forma os céus e a terra, prepara a vida e cria a humanidade à sua imagem. Base principal: Gênesis 1–2."},
- {id:2,title:"Adão e Eva — A Primeira Família",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"/adao-e-eva.jpg",desc:"Conheça o jardim do Éden, a primeira família, a tentação, a desobediência e as consequências do pecado. Base principal: Gênesis 2–3."},
- {id:3,title:"Jesus, a Nossa Esperança",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"/jesus-esperanca.jpg",desc:"Uma apresentação da vida, do amor, dos ensinamentos e da esperança oferecida por Jesus Cristo. Leituras: Evangelhos."},
- {id:4,title:"A Vitória de Cristo",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"/vitoria-cristo.jpg",desc:"A morte e a ressurreição de Jesus Cristo e o significado da vitória sobre o pecado e a morte. Leituras: Isaías 53; Mateus 27–28; 1 Coríntios 15."},
- {id:5,title:"Reavivamento sem Retorno ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"/reavivamento.jpg",desc:"Um chamado a lembrar, arrepender-se e voltar ao primeiro amor. Estudo baseado em Apocalipse 2:1–7."},
- {id:6,title:"Arca Kids — Aprendendo com a Bíblia",category:"Infantis",volume:"VOL. 01",date:"06/11/2026",image:"/arca-kids.jpg",desc:"Histórias e ensinamentos bíblicos apresentados de forma simples e apropriada para crianças."},
- {id:7,title:"O Primeiro Amor — Volte ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"/primeiro-amor.jpg",desc:"Uma reflexão sobre a comunhão com Deus, a perseverança e o retorno ao primeiro amor. Base: Apocalipse 2:4–7."},
- {id:8,title:"Eis-me Aqui, Envia-me a Mim",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"/eis-me-aqui.jpg",desc:"Uma mensagem sobre disponibilidade, coragem e obediência ao chamado de Deus. Base: Isaías 6:8."},
- {id:9,title:"Conexão Missionária Global",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"/conexao-global.jpg",desc:"Uma HQ sobre a missão de anunciar o Evangelho e servir pessoas em diferentes lugares. Leituras: Mateus 24:14; Marcos 16:15."},
- {id:10,title:"Um Novo Começo com Deus",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"/novo-comeco.jpg",desc:"Uma história sobre arrependimento, fé, perdão e a possibilidade de recomeçar com Deus. Leituras: 2 Coríntios 5:17; Lamentações 3:22–23."}
+ {id:1,title:"A História da Criação",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"criacao.jpg",desc:"A narrativa bíblica da criação: Deus forma os céus e a terra, prepara a vida e cria a humanidade à sua imagem. Base principal: Gênesis 1–2."},
+ {id:2,title:"Adão e Eva — A Primeira Família",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"adao-e-eva.jpg",desc:"Conheça o jardim do Éden, a primeira família, a tentação, a desobediência e as consequências do pecado. Base principal: Gênesis 2–3."},
+ {id:3,title:"Jesus, a Nossa Esperança",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"jesus-esperanca.jpg",desc:"Uma apresentação da vida, do amor, dos ensinamentos e da esperança oferecida por Jesus Cristo. Leituras: Evangelhos."},
+ {id:4,title:"A Vitória de Cristo",category:"Bíblicas",volume:"VOL. 01",date:"06/11/2026",image:"vitoria-cristo.jpg",desc:"A morte e a ressurreição de Jesus Cristo e o significado da vitória sobre o pecado e a morte. Leituras: Isaías 53; Mateus 27–28; 1 Coríntios 15."},
+ {id:5,title:"Reavivamento sem Retorno ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"reavivamento.jpg",desc:"Um chamado a lembrar, arrepender-se e voltar ao primeiro amor. Estudo baseado em Apocalipse 2:1–7."},
+ {id:6,title:"Arca Kids — Aprendendo com a Bíblia",category:"Infantis",volume:"VOL. 01",date:"06/11/2026",image:"arca-kids.jpg",desc:"Histórias e ensinamentos bíblicos apresentados de forma simples e apropriada para crianças."},
+ {id:7,title:"O Primeiro Amor — Volte ao Altar",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:"primeiro-amor.jpg",desc:"Uma reflexão sobre a comunhão com Deus, a perseverança e o retorno ao primeiro amor. Base: Apocalipse 2:4–7."},
+ {id:8,title:"Eis-me Aqui, Envia-me a Mim",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"eis-me-aqui.jpg",desc:"Uma mensagem sobre disponibilidade, coragem e obediência ao chamado de Deus. Base: Isaías 6:8."},
+ {id:9,title:"Conexão Missionária Global",category:"Missionárias",volume:"VOL. 01",date:"06/11/2026",image:"conexao-global.jpg",desc:"Uma HQ sobre a missão de anunciar o Evangelho e servir pessoas em diferentes lugares. Leituras: Mateus 24:14; Marcos 16:15."},
+ {id:10,title:"Um Novo Começo com Deus",category:"Estudos",volume:"VOL. 01",date:"06/11/2026",image:novo-comeco.jpg,desc:"Uma história sobre arrependimento, fé, perdão e a possibilidade de recomeçar com Deus. Leituras: 2 Coríntios 5:17; Lamentações 3:22–23."}
 ];
 let activeCategory="Todos", activeBook=null, favorites=JSON.parse(localStorage.getItem("cmg-favorites")||"[]");
 const grid=document.getElementById("bookGrid"), popular=document.getElementById("popularGrid"), search=document.getElementById("searchInput");
